@@ -1,0 +1,374 @@
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+
+/* ------------- HEADER -------------- */
+.ga-Header-Left p {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+}
+
+.ga-Header h1 {
+    font-size: 30px;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+}
+
+.ga-Header-Left img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.ga-Header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+
+}
+
+
+.ga-Header-Left {
+    display: flex;
+    flex: 1;
+    padding-left: 10px;
+}
+
+
+.ga-Header-Center {
+    flex: 2;
+    text-align: center;
+}
+
+.ga-Header-Right {
+    display: flex;
+    flex: 1;
+    padding-right: 10px;
+    position: relative;
+    width: 300px;
+}
+
+
+.ga-Header-Right input[type="text"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.ga-Header-Right button[type="submit"] {
+    position: absolute;
+    right: 23px;
+    top: 3px;
+    padding: 5px 10px;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ga-Input-Buscar {
+    width: 100%;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+/*---TERMINA HEADER----*/
+
+.ga-Linea-Div{
+    width: 100%;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+
+.ga-Div-Padre{
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ga-Div-Left {
+    width: 15%;
+    height: auto;
+    background-image: url(imgs/fondo.png);
+    display: block;
+    
+}
+
+.ga-foto-1,
+.ga-foto-2,
+.ga-foto-3,
+.ga-foto-4,
+.ga-foto-5,
+.ga-foto-6,
+.ga-foto-7,
+.ga-foto-8,
+.ga-foto-9,
+.ga-foto-10{
+    width: 50%;
+    
+}
+
+.ga-p-1,
+.ga-p-2,
+.ga-p-3,
+.ga-p-4,
+.ga-p-5,
+.ga-p-6,
+.ga-p-7,
+.ga-p-8,
+.ga-p-9,
+.ga-p-10{
+    width: 50%;
+}
+
+.ga-1,
+.ga-2,
+.ga-3,
+.ga-4,
+.ga-5,
+.ga-6,
+.ga-7,
+.ga-8,
+.ga-9,
+.ga-10{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 1.563rem;
+    width: 90%;
+    position: relative; 
+}
+
+.ga-foto-1-hover img,
+.ga-foto-2-hover img,
+.ga-foto-3-hover img,
+.ga-foto-4-hover img,
+.ga-foto-5-hover img,
+.ga-foto-6-hover img,
+.ga-foto-7-hover img,
+.ga-foto-8-hover img,
+.ga-foto-9-hover img
+.ga-foto-10-hover img{
+   display: none;
+}
+
+.ga-foto-1-active img,
+.ga-foto-2-active img,
+.ga-foto-3-active img,
+.ga-foto-4-active img,
+.ga-foto-5-active img,
+.ga-foto-6-active img,
+.ga-foto-7-active img,
+.ga-foto-8-active img,
+.ga-foto-9-active img,
+.ga-foto-10-active img{
+    display: none;
+}
+
+.ga-1:hover .ga-foto-1,
+.ga-2:hover .ga-foto-2,
+.ga-3:hover .ga-foto-3,
+.ga-4:hover .ga-foto-4,
+.ga-5:hover .ga-foto-5,
+.ga-6:hover .ga-foto-6,
+.ga-7:hover .ga-foto-7,
+.ga-8:hover .ga-foto-8,
+.ga-9:hover .ga-foto-9,
+.ga-10:hover .ga-foto-10     {
+    display: none;
+}
+
+
+
+.ga-1:hover .ga-foto-1-hover img,
+.ga-2:hover .ga-foto-2-hover img,
+.ga-3:hover .ga-foto-3-hover img,
+.ga-4:hover .ga-foto-4-hover img,
+.ga-5:hover .ga-foto-5-hover img,
+.ga-6:hover .ga-foto-6-hover img,
+.ga-7:hover .ga-foto-7-hover img,
+.ga-8:hover .ga-foto-8-hover img,
+.ga-9:hover .ga-foto-9-hover img,
+.ga-10:hover .ga-foto-10-hover img    {
+    display: block;
+}
+
+
+
+.ga-1:hover .ga-foto-1-active img,
+.ga-2:hover .ga-foto-2-active img,
+.ga-3:hover .ga-foto-3-active img,
+.ga-4:hover .ga-foto-4-active img,
+.ga-5:hover .ga-foto-5-active img,
+.ga-6:hover .ga-foto-6-active img,
+.ga-7:hover .ga-foto-7-active img,
+.ga-8:hover .ga-foto-8-active img,
+.ga-9:hover .ga-foto-9-active img,
+.ga-10:hover .ga-foto-10-active img{
+    display: none; /* Oculta la imagen activa solo cuando se hace hover */
+}
+
+.ga-1:active .ga-foto-1-active img,
+.ga-2:active .ga-foto-2-active img,
+.ga-3:active .ga-foto-3-active img,
+.ga-4:active .ga-foto-4-active img,
+.ga-5:active .ga-foto-5-active img,
+.ga-6:active .ga-foto-6-active img,
+.ga-7:active .ga-foto-7-active img,
+.ga-8:active .ga-foto-8-active img,
+.ga-9:active .ga-foto-9-active img,
+.ga-10:active .ga-foto-10-active img   {
+    display: block; /* Muestra la imagen activa cuando el elemento está activo */
+}
+
+p{
+    
+    font-size: 14px;
+}
+.ga-1:hover,
+.ga-2:hover,
+.ga-3:hover,
+.ga-4:hover,
+.ga-5:hover,
+.ga-6:hover,
+.ga-7:hover,
+.ga-8:hover,
+.ga-9:hover,
+.ga-10:hover{
+    background-color: #f0f0f0; 
+    color: #A3181C;
+    border-radius: 10px;
+
+}
+
+.ga-1:active,
+.ga-2:active,
+.ga-3:active,
+.ga-4:active,
+.ga-5:active,
+.ga-6:active,
+.ga-7:active,
+.ga-8:active,
+.ga-9:active,
+.ga-10:active{
+    color: #848484;
+    background: none;
+}
+
+
+.ga-Div-Right {
+    width: 90%; /* Ancho del contenedor */
+    height: auto; /* Altura automática para ajustarse al contenido */
+    padding-left:1.25rem ;
+    display: block; /* Asegura que el contenedor se muestre como bloque */
+  }
+  
+  .ga-Div-Right video {
+    width: 100%; /* Ancho del video al 100% del contenedor */
+    height: 100%; /* Altura del video al 100% del contenedor */
+  }
+  
+  
+.ga-p-1,
+.ga-p-2,
+.ga-p-3,
+.ga-p-4,
+.ga-p-5,
+.ga-p-6,
+.ga-p-7,
+.ga-p-8,
+.ga-p-9,
+.ga-p-10 {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 50%; /* Alinea el texto verticalmente */
+    left: 50%; /* Alinea el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    width: 100%; /* Ajusta el ancho al 100% */
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0; /* Elimina los márgenes */
+}
+
+
+
+.ga-foto-1-active img,
+.ga-foto-2-active img,
+.ga-foto-3-active img,
+.ga-foto-4-active img,
+.ga-foto-5-active img,
+.ga-foto-6-active img,
+.ga-foto-7-active img,
+.ga-foto-8-active img,
+.ga-foto-9-active img,
+.ga-foto-10-active img {
+    display: none;
+}
+
+.ga-1:active .ga-foto-1-active img,
+.ga-2:active .ga-foto-2-active img,
+.ga-3:active .ga-foto-3-active img,
+.ga-4:active .ga-foto-4-active img,
+.ga-5:active .ga-foto-5-active img,
+.ga-6:active .ga-foto-6-active img,
+.ga-7:active .ga-foto-7-active img,
+.ga-8:active .ga-foto-8-active img,
+.ga-9:active .ga-foto-9-active img,
+.ga-10:active .ga-foto-10-active img {
+    display: block; /* Muestra la imagen activa solo cuando el elemento está activo */
+    position: absolute; /* Mantén la imagen activa en su lugar */
+    top: 0; /* Ajusta la posición verticalmente si es necesario */
+    left: 0; /* Ajusta la posición horizontalmente si es necesario */
+}
+
+
+
+.ga-Div-Right iframe {
+    width: 100%; /* Haz que el iframe ocupe todo el ancho del contenedor */
+    height: 88vh;
+}
+
+/*TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+
+.ga-Div-Left{
+    width: 50%;
+}
+.ga-1,
+.ga-2,
+.ga-3,
+.ga-4,
+.ga-5,
+.ga-6,
+.ga-7,
+.ga-8,
+.ga-9,
+.ga-10{
+    margin-bottom: 50px;
+}
+
+
+}
+
+
+/*Celular*/
+@media (max-width:768px) and (orientation: portrait){
+    .ga-Div-Left{
+        width: 100%;
+    }
+
+.ga-Div-Padre{
+    display: block;
+}
+
+}
+
+

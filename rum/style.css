@@ -1,0 +1,1040 @@
+* {
+    background: #ffF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* ------------- HEADER -------------- */
+.rum-Header-Left p {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+}
+
+.rum-Header h1 {
+    font-size: 30px;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+}
+
+.rum-Header-Left img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.rum-Header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+
+}
+
+
+.rum-Header-Left {
+    display: flex;
+    flex: 1;
+    padding-left: 10px;
+}
+
+
+.rum-Header-Center {
+    flex: 2;
+    text-align: center;
+}
+
+.rum-Header-Right {
+    display: flex;
+    flex: 1;
+    padding-right: 10px;
+    position: relative;
+    width: 300px;
+}
+
+
+.rum-Header-Right input[type="text"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.rum-Header-Right button[type="submit"] {
+    position: absolute;
+    right: 23px;
+    top: 3px;
+    padding: 5px 10px;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#rum-Input-Buscar {
+    width: 100%;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+/*---TERMINA HEADER----*/
+
+/*Elementos P y label*/
+#rum-P-Title-Datos-Generales,
+#rum-P-Title-Datos-Maquina-Vehiculo,
+#rum-P-Title-Datos-Control,
+#rum-P-Title-Odometro-Horometro,
+#rum-P-Title-Ubicacion-Trabajos-Reporte-Fallas {
+    display: inline-block;
+    position: relative;
+    bottom: 18px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+#rum-P-Title-Actividades-Horas-Campo {
+    display: inline-block;
+    position: relative;
+    bottom: 12px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 14px;
+
+}
+
+/*Termina Elementos P " */
+
+
+/*---BOTONES DE IMPRIMIR Y MODAL---*/
+.rum-Botones-Imprimir-Modal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 1.875rem;
+}
+
+#rum-Btn-Imprimir {
+    margin-right: 0.625rem;
+}
+
+#rum-Btn-Modal {
+    margin-right: 0.625rem;
+}
+
+#rum-Btn-Imprimir,
+#rum-Btn-Modal {
+    width: 10%;
+    height: 4vh;
+    border: 2px solid #030303;
+    cursor: pointer;
+    background: #FF8888;
+    border-radius: 4px;
+    color: #ffF;
+    margin-bottom: 20px;
+}
+
+#rum-Btn-Imprimir:hover,
+#rum-Btn-Modal:hover {
+    background: #FF5555;
+}
+
+#rum-Btn-Imprimir:active,
+#rum-Btn-Modal:active {
+    background: #FF2323;
+}
+
+/*---TERMINAN BOTONES DE IMPRIMIR Y MODAL---*/
+/*Contenedor padre y Formulario  */
+.rum-Div-Padre {
+    height: auto;
+    width: 100%;
+
+    padding: 0.5em;
+}
+
+.rum-Formulario-Padre {
+    height: auto;
+    width: 100%;
+
+}
+
+/*contenedor PADRE DE  datos generales y maquina vehiculo y HIJOS  */
+.rum-Datos-Generales-Maquina-Vehiculo {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    margin-bottom: 1.875rem;
+}
+
+.rum-Datos-Generales {
+    display: flex;
+    width: 50%;
+    border: 1px solid #030303;
+    margin-right: 0.625rem;
+}
+
+.rum-Datos-Generales-Dividir,
+.rum-Datos-Maquina-Vehiculos-Dividir {
+    width: 100%;
+
+}
+
+.rum-Datos-Maquina-Vehiculos {
+    width: 50%;
+    border: 1px solid #030303;
+}
+
+.rum-Div-Datos-Generales-Centro,
+.rum-Div-Datos-Maquina-Vehiculo-Centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+.rum-Div-Contenido-1,
+.rum-Div-Contenido-2,
+.rum-Div-Contenido-3,
+.rum-Div-Contenido-4,
+.rum-Div-Contenido-5,
+.rum-Div-Contenido-6 {
+    width: 100%;
+}
+
+.rum-Div-Contenido-1,
+.rum-Div-Contenido-2,
+.rum-Div-Contenido-4,
+.rum-Div-Contenido-5 {
+    margin-right: 10px;
+}
+
+
+.rum-Div-Contenido-1 input,
+.rum-Div-Contenido-2 input,
+.rum-Div-Contenido-3 input,
+.rum-Div-Contenido-4 input,
+.rum-Div-Contenido-5 input,
+.rum-Div-Contenido-6 input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+
+.oculto {
+    display: none;
+}
+
+/*Termina contenedor PADRE DE  datos generales y maquina vehiculo y HIJOS  */
+
+
+/*Contenedor de datos de control */
+.rum-Div-Datos-Control {
+    height: auto;
+    width: 100%;
+    border: 1px solid #030303;
+    margin-bottom: 1.875rem;
+}
+
+.rum-Datos-Control-Dividir {
+    width: 100%;
+
+    height: auto;
+}
+
+.rum-Div-Datos-Control-Centro {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.rum-Div-Contenido-7,
+.rum-Div-Contenido-8 {
+    width: 100%;
+}
+
+.rum-Div-Contenido-7 {
+    margin-right: 10px;
+}
+
+.rum-Div-Contenido-7 input,
+.rum-Div-Contenido-8 input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+.rum-Div-Encendido,
+.rum-Div-Apagado {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+.rum-Div-Contenido-9-Encendido,
+.rum-Div-Contenido-10-Fecha,
+.rum-Div-Contenido-11-Ubicacion,
+.rum-Div-Contenido-9-Apagado,
+.rum-Div-Contenido-10-Fecha-Apagado,
+.rum-Div-Contenido-11-Ubicacion-Apagado {
+    width: 100%;
+}
+
+.rum-Div-Contenido-9-Encendido,
+.rum-Div-Contenido-10-Fecha,
+.rum-Div-Contenido-9-Apagado,
+.rum-Div-Contenido-10-Fecha-Apagado {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.rum-Div-Contenido-9-Encendido input,
+.rum-Div-Contenido-10-Fecha input,
+.rum-Div-Contenido-11-Ubicacion input,
+.rum-Div-Contenido-9-Apagado input,
+.rum-Div-Contenido-10-Fecha-Apagado input,
+.rum-Div-Contenido-11-Ubicacion-Apagado input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+/*Termina Contenedor de datos de control */
+
+
+/*Contenedor de odometro y horometro */
+.rum-Div-Odometro-Horometro {
+    height: auto;
+    width: 100%;
+    border: 1px solid #030303;
+    margin-bottom: 1.875rem;
+}
+
+.rum-Div-Padre-Camara,
+.rum-Div-Padre-Camara2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rum-Div-Camara,
+.rum-Div-Camara2 {
+    width: 50%;
+
+}
+
+.rum-Div-Camara label,
+.rum-Div-Camara2 label {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 10px;
+}
+
+.rum-Div-Camara input,
+.rum-Div-Camara2 input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+
+
+/*Contenedor de control de actividades horas campo */
+.rum-Div-Control-Actividades-Horas-Campo {
+    height: auto;
+    width: 100%;
+    border: 1px solid #030303;
+    margin-bottom: 1.875rem;
+    padding: 0.5em;
+
+}
+
+.rum-Div-Control-Actividades-Horas-Campo label {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 10px;
+}
+
+.rum-Div-No-Actividad,
+.rum-Div-Descripcion-Actividad,
+.rum-Div-Hora-Inicio-Trabajo,
+.rum-Div-Hora-Termino-Trabajo,
+.rum-Div-Horas-Efectivas,
+.rum-Div-Observaciones {
+    margin-right: 10px;
+
+}
+
+.rum-Div-Descripcion-Actividad,
+.rum-Div-Observaciones {
+    width: 40%;
+}
+
+.rum-Div-No-Actividad,
+.rum-Div-Hora-Inicio-Trabajo,
+.rum-Div-Hora-Termino-Trabajo,
+.rum-Div-Horas-Efectivas {
+    width: 12%;
+}
+
+.rum-Div-Combustible {
+    width: 20%;
+}
+
+
+.rum-Primer-Actividad,
+.rum-Segunda-Actividad,
+.rum-Tercera-Actividad,
+.rum-Cuarta-Actividad,
+.rum-Quinta-Actividad {
+    width: 100%;
+    border: 1px solid;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.rum-Primer-Actividad input,
+.rum-Segunda-Actividad input,
+.rum-Tercera-Actividad input,
+.rum-Cuarta-Actividad input,
+.rum-Quinta-Actividad input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+
+/*Contenedor  ubicacion trabajos reportes y fallas */
+.rum-Div-Ubicacion-Trabajos-Reporte-Fallas {
+    height: 30vh;
+    width: 100%;
+    border: 1px solid #030303;
+    margin-bottom: 1.875rem;
+}
+
+.rum-Div-Ubicacion-Trabajos-Reporte-Fallas-Dividir {
+    width: 100%;
+}
+
+.rum-Div-Tramo-Subtramo-Margen-Centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-bottom: 1.875rem;
+}
+
+.rum-Div-Contenido-11,
+.rum-Div-Contenido-12,
+.rum-Div-Contenido-13 {
+    width: 100%;
+}
+
+.rum-Div-Contenido-11,
+.rum-Div-Contenido-12 {
+    margin-right: 10px;
+}
+
+.rum-Div-Contenido-11 input,
+.rum-Div-Contenido-12 input,
+.rum-Div-Contenido-13 input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+.rum-Div-Rendimiento-Operatividad-Causa {
+    display: flex;
+    width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
+
+.rum-Div-Contenido-14 {
+    width: 67%;
+    height: 52px;
+    border: 2px solid #030303;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+#rum-P-Title-Rendimiento-Operatividad-Causa {
+    display: inline-block;
+    position: relative;
+    bottom: 18px;
+    color: #ED1D24;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.rum-Div-Rendimiento-Operatividad-Causa-Dividir {
+    width: 100%;
+}
+
+.rum-Rendimiento-Operatividad-Causa-Dividir-Centro {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rum-Div-Contenido-15 {
+    width: 100%;
+    border-radius: 6px;
+
+}
+
+.rum-Div-Contenido-15 label {
+    color: #ED1D24;
+    display: inline-block;
+    background: white;
+    position: relative;
+    top: -16px;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.rum-Div-Contenido-15 input {
+    width: 100%;
+    height: 52px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    background: #fff;
+    color: #000;
+    outline: none;
+    position: relative;
+    bottom: 19px;
+}
+
+/*Termina Contenedor  ubicacion trabajos reportes y fallas */
+
+/*Contenedor de Firmas */
+.rum-Div-Firmas {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+    margin-bottom: 1.875rem;
+
+}
+
+.rum-Firma-Operador,
+.rum-Firma-Lider-Proyecto,
+.rum-Firma-Cliente {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+    height: 30vh;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.rum-Firma-Operador p,
+.rum-Firma-Lider-Proyecto p,
+.rum-Firma-Cliente p {
+    margin: 0;
+    color: #ED1D24;
+    font-size: 14px;
+    /* Ajuste para eliminar el espacio predeterminado del párrafo */
+}
+
+/*Termina Contenedor de Firmas */
+
+/*Contenedor de botones */
+.rum-Div-Botones {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+
+}
+
+#rum-Btn-Limpiar {
+    width: 10%;
+    height: 4vh;
+    border: 2px solid;
+    cursor: pointer;
+    background: #E3F5FF;
+    border-radius: 4px;
+}
+
+#rum-Btn-Limpiar:hover {
+    background: #A6DFFF;
+}
+
+#rum-Btn-Limpiar:active {
+    background: #5BC4FF;
+}
+
+#rum-Btn-Guardar,
+#rum-Btn-Actualizar{
+    width: 10%;
+    height: 4vh;
+    border: 2px solid #030303;
+    cursor: pointer;
+    background: #FF8888;
+    border-radius: 4px;
+    color: #ffF;
+    margin-bottom: 20px;
+}
+
+#rum-Btn-Guardar:hover,
+#rum-Btn-Actualizar:hover {
+    background: #FF5555;
+}
+
+#rum-Btn-Guardar:active,
+#rum-Btn-Actualizar:active {
+    background: #FF2323;
+}
+
+
+/*Termina Contenedor de botones */
+
+
+
+
+
+/*---DISEÑO PARA TABLET---*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .rum-Div-Padre {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #rum-Btn-Imprimir,
+    #rum-Btn-Regresar,
+    #rum-Btn-Limpiar,
+    #rum-Btn-Guardar {
+        width: 20%;
+    }
+
+    .rum-Formulario-Padre {
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Datos-Generales-Maquina-Vehiculo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Datos-Generales {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.875rem;
+    }
+
+    .rum-Datos-Maquina-Vehiculos {
+        width: 100%;
+    }
+
+    .rum-Div-Datos-Control {
+        height: auto;
+    }
+
+    .rum-Div-Encendido,
+    .rum-Div-Apagado {
+        display: block;
+    }
+
+    .rum-Div-Odometro-Horometro {
+        height: auto;
+        margin-bottom: 1.875rem;
+    }
+
+    .CONTENEDORES-DE-IMAGENES {
+        display: block;
+
+    }
+
+    .CONTENEDOR-IMAGEN,
+    .CONTENEDOR-IMAGEN-2 {
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    .rum-Div-Control-Actividades-Horas-Campo {
+        width: 100%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .rum-Div-Ubicacion-Trabajos-Reporte-Fallas {
+        height: auto;
+    }
+
+    .rum-Div-Rendimiento-Operatividad-Causa {
+        display: block;
+    }
+
+    .rum-Div-Contenido-14 {
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    .rum-Div-Contenido-15 {
+        width: 100%;
+    }
+
+    .rum-Primer-Actividad,
+    .rum-Segunda-Actividad,
+    .rum-Tercera-Actividad {
+        display: block;
+        border: none;
+    }
+
+    .rum-Div-No-Actividad,
+    .rum-Div-Descripcion-Actividad,
+    .rum-Div-Hora-Inicio-Trabajo,
+    .rum-Div-Hora-Termino-Trabajo,
+    .rum-Div-Horas-Efectivas,
+    .rum-Div-Observaciones,
+    .rum-Div-Combustible {
+        width: 100%;
+    }
+
+
+}
+
+/*---DISEÑO PARA CELULAR---*/
+@media (max-width:768px) and (orientation: portrait) {
+
+    /*---HEADER CELULAR ----*/
+    .rum-Header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rum-Header-Left {
+        order: 1;
+        align-self: flex-start;
+    }
+
+    .rum-Header-Left img {
+        max-width: 50px;
+
+    }
+
+    .rum-Header-Left p {
+        font-size: 8px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        position: relative;
+        right: 70px;
+    }
+
+    .rum-Header-Center {
+        order: 2;
+    }
+
+    .rum-Header-Center h1 {
+        font-size: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .rum-Header-Right {
+        order: 3;
+        width: 80%;
+
+    }
+
+    .rum-Header-Right input[type="text"] {
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    .rum-Header-Right button[type="submit"] {
+        position: absolute;
+        right: 25px;
+        top: 10px;
+        padding: 5px 10px;
+        color: #000000;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    /*---TERMINA DIV DE HEADER---*/
+
+
+    .rum-Div-Padre {
+        width: 100%;
+        height: 100vh;
+    }
+
+    #rum-Btn-Imprimir,
+    #rum-Btn-Regresar,
+    #rum-Btn-Limpiar,
+    #rum-Btn-Guardar {
+        width: 30%;
+        height: 5vh;
+    }
+
+    .rum-Div-Botones {
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Formulario-Padre {
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Formulario-Padre {
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Datos-Generales-Maquina-Vehiculo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .rum-Datos-Generales {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.875rem;
+    }
+
+    .rum-Div-Datos-Generales-Centro {
+        display: block;
+    }
+
+    .rum-Div-Encendido,
+    .rum-Div-Apagado {
+        display: block;
+    }
+
+    .rum-Datos-Maquina-Vehiculos {
+        width: 100%;
+    }
+
+    .rum-Div-Datos-Maquina-Vehiculo-Centro {
+        display: block;
+    }
+
+    .rum-Div-Datos-Control {
+        width: 100%;
+        margin-bottom: 1.875rem;
+        height: auto;
+    }
+
+    .rum-Div-Datos-Control-Centro {
+        display: block;
+    }
+
+    .rum-Div-Odometro-Horometro {
+        height: auto;
+        margin-bottom: 1.875rem;
+    }
+
+    .CONTENEDORES-DE-IMAGENES {
+        display: block;
+
+    }
+
+    .CONTENEDOR-IMAGEN,
+    .CONTENEDOR-IMAGEN-2 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.25rem;
+    }
+
+    .rum-Div-Control-Actividades-Horas-Campo {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        font-size: 8px;
+    }
+
+    .rum-Div-Ubicacion-Trabajos-Reporte-Fallas {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .rum-Div-Tramo-Subtramo-Margen-Centro {
+        display: block;
+    }
+
+    .rum-Div-Rendimiento-Operatividad-Causa {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .rum-Rendimiento-Operatividad-Causa-Dividir-Centro {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .rum-Div-Contenido-14 {
+        width: 100%;
+        margin-bottom: 1.25rem;
+        height: 10vh;
+        margin-bottom: 30px;
+    }
+
+    .rum-Rendimiento-Operatividad-Causa-Dividir-Centro input {
+        width: 12px;
+
+    }
+
+    .rum-Rendimiento-Operatividad-Causa-Dividir-Centro label {
+        font-size: 10px;
+
+    }
+
+    .rum-Div-Contenido-15 {
+        width: 100%;
+    }
+
+    #firmaForm {
+        height: auto;
+    }
+
+    .rum-Div-Firmas {
+        display: block;
+    }
+
+    .rum-Firma-Operador,
+    .rum-Firma-Lider-Proyecto,
+    .rum-Firma-Cliente {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .rum-Primer-Actividad,
+    .rum-Segunda-Actividad,
+    .rum-Tercera-Actividad {
+        display: block;
+        border: none;
+
+    }
+
+    .rum-Div-No-Actividad,
+    .rum-Div-Descripcion-Actividad,
+    .rum-Div-Hora-Inicio-Trabajo,
+    .rum-Div-Hora-Termino-Trabajo,
+    .rum-Div-Horas-Efectivas,
+    .rum-Div-Observaciones,
+    .rum-Div-Combustible {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+        .rum-Firma-Operador {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        #rum-P-Firma-Operador {
+            font-size: 18px;
+            cursor: pointer; /* Agregar cursor pointer al div */
+        }
+
+        #rum-Input-Firma {
+            display: none; /* Ocultar el input de tipo file */
+        }
+
+        #vista-previa-firma {
+            max-width: 100%; /* Ajustar al 100% del contenedor */
+            max-height: 200px; /* Establecer una altura máxima para evitar que se salga del recuadro */
+            margin-top: 10px;
+        }
+
+        #rum-P-Firma-Operador::after {
+            content: ""; /* Agregar un pseudo-elemento después del párrafo */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+        }

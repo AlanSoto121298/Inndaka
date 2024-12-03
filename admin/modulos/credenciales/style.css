@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background: #F1F1F1 !important;
+    width: auto;
+    height: auto;
+
+}
+
+
+.cre-Linea-Div{
+    width: 100%;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+
+.cre-Linea2-Div{
+    width: 100%;
+    border: 1px solid ;
+    margin-bottom: 5px;
+}
+
+.col-App {
+    /*esta declarado aqui para que se oculte en HTML  Esto 
+    nos sirve para el modo horizontal en dispositivos moviles*/
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 40px;
+    text-align: center;
+    display: none;
+}
+
+.col-Mensaje {
+    /* El mensaje que ocultamos*/
+    display: none;
+}
+
+
+/*AQUI ESTA EL HEADER */
+.cre-Header-Left p {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+}
+
+.cre-Header h1 {
+    font-size: 40px;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+
+
+}
+
+.cre-Header-Left img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.cre-Header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+
+.cre-Header-Left {
+    display: flex;
+    flex: 1;
+    padding-left: 0;
+}
+
+
+.cre-Header-Center {
+    flex: 2;
+    text-align: center;
+}
+
+.cre-Header-Right {
+    display: flex;
+    flex: 1;
+    padding-right: 10px;
+    position: relative;
+    width: 300px;
+}
+
+
+.cre-Header-Right input[type="text"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.cre-Header-Right button[type="submit"] {
+    position: absolute;
+    right: 23px;
+    top: 5px;
+    padding: 5px 10px;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    background: transparent;
+}
+
+#cre-Input-Buscar {
+    width: 10%;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+#cre-BuscarBtn {
+    position: relative;
+    height: 3vh;
+    right: 2.188rem;
+    top: 0.325rem;
+    border: none;
+
+}
+
+.cre-left {
+    display: flex;
+    width: 50%;
+    background: #F1F1F1;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.cre-right {
+    width: 50%;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+
+}
+
+
+/*--Primer Div con el buscador VIENE EL TITULO LISTA DE CREDENCIALES Y LA IMAGEN DEL LADO DERECHO EL BUSCADOR --*/
+
+/*---AQUI EL SEGUNDO CONTENEDOR CON EL CONTEO Y EL BOTON DE AGREGAR---*/
+.cre-list-2 {
+    width: 100%;
+    height: auto;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: space-around;
+   
+  
+
+}
+
+.cre-left-list-2 {
+    width: 50%;
+    height: auto;
+    background: #F1F1F1;
+    display: flex;
+    padding: 10px;
+    margin-right: 10px;
+
+
+}
+
+.cre-conteo {
+    width: auto;
+    height: auto;
+    background: #F1F1F1;
+    margin-right: 10px;
+}
+
+#numero-conteo {
+    color: #A3181C;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.cre-filtrado {
+    height: auto;
+    width: auto;
+    background: #F1F1F1;
+    display: flex;
+    font-weight: bold;
+}
+
+.cre-filtrado p {
+    margin-right: 10px;
+}
+
+#cre-filtrado-select {
+    height: 4vh;
+}
+
+.cre-right-list-2 {
+    width: 50%;
+    height: auto;
+    background: #F1F1F1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+
+
+/**--AQUI ESTAN LOS BOTONES DE AGREGAR Y BUSCAR --**/
+
+
+
+
+#btnbuscar {
+    display: none;
+}
+
+#btnbuscar:hover,
+#btnagregar:hover {
+    background: #FF5555;
+}
+
+#btnbuscar:active #btnagregar:active {
+    background: #FF2323;
+}
+
+
+
+/* Eliminar el borde azul al seleccionar el input */
+
+.form-buscar{
+    width: 30%;
+    outline: none;
+    
+}
+
+
+
+/* Eliminar el borde azul al seleccionar el input */
+
+
+/**--AQUI EMPIEZA LA EDICIÓN DE LA TABLA**/
+
+
+#cre-tabla{
+    padding: 20px;
+}
+
+thead {
+    background: #F1F1F1;
+}
+
+tr {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody {
+    background: white;
+}
+
+tbody a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+tbody td {
+    border: none;
+}
+
+th,
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Estilo para hacer que el encabezado de la tabla se quede fijo en la parte superior */
+#dataTable thead {
+    position: sticky;
+    /* Hace que el thead sea pegajoso */
+    top: 0;
+    /* Lo mantiene en la parte superior cuando se desplaza */
+    background-color: #F1F1F1;
+    /* Esto es importante para que el fondo del encabezado sea blanco (o el color que elijas) */
+    z-index: 10;
+    /* Asegura que el encabezado esté por encima del contenido */
+    border-top: #F1F1F1;
+    border-bottom: #F1F1F1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* Necesario para posicionar el menú */
+    z-index: 1000;
+    /* Asegura que el menú quede por encima de otros elementos */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.table-container {
+    overflow-y: auto;
+    height: 400px;
+    /* Ajusta la altura según lo que necesites */
+}
+
+/**-AQUI PARA EDITAR LOS INPUTS--*/
+
+
+.cre-Linea-Div {
+    width: 100%;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+
+.cre2-Linea-Div,
+.cre3-Linea-Div {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 5px;
+
+
+}
+
+
+
+/*--AQUI VA EL MODAL PARA REGISTRAR--*/
+
+/* Estilo para el modal */
+#modalRegistro .modal-dialog {
+    max-width: 50%;
+    /* Puedes ajustar el 90% a lo que necesites */
+}
+
+/* Estilo para el contenido del modal */
+#modalRegistro .modal-content {
+    width: 100%;
+    /* Se asegura de que el contenido ocupe el 100% del contenedor */
+    height: auto;
+    background: #FFFFFF;
+    /* Esto solo es para pruebas, puedes quitarlo o cambiar el color */
+}
+
+.modal-imagen {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Para el título del modal */
+#modalRegistro .modal-header h2 {
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+}
+
+/* Para el cuerpo del modal */
+#modalRegistro .modal-body {
+    width: 100%;
+    padding: 20px;
+    /* Si deseas más espacio en el cuerpo */
+}
+
+
+
+/*-BOTONES DE CANCELAR  Y GUARDAR-*/
+
+.div-botones {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.div-btn-guardar {
+    margin-left: 20px;
+    width: auto;
+    height: auto;
+
+}
+
+.div-btn-cancelar {
+    width: auto;
+    height: auto;
+
+
+}
+
+
+
+#btncancelarmodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 114px;
+    height: 35px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background: #A3181C;
+    border-radius: 10px;
+
+}
+
+#btnguardarmodal {
+    width: 114px;
+    height: 35px;
+    background: #058F66;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+/*PARA EL BOTON DE ACCIONES */
+/* Contenedor del menú desplegable (inicialmente oculto) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+
+/* Estilo del botón que abre el menú desplegable */
+.dropbtn {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    right: 0;
+}
+
+/* Estilo de las opciones dentro del menú */
+.dropdown-content a {
+    display: inline-flex;
+    align-items: center;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    /* Tamaño de fuente más pequeño para el texto */
+    font-weight: bold;
+}
+
+/* Asegurar que los iconos no cambien el tamaño de la letra */
+.dropdown-content a i {
+    margin-right: 8px;
+    /* Espacio entre el icono y el texto */
+    font-size: 20px;
+    /* Puedes ajustar el tamaño de los iconos si es necesario */
+    font-weight: bold;
+}
+
+/* Estilo cuando el mouse pasa sobre las opciones */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable al hacer clic */
+.show {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .cre-list,
+    .cre-list-2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .cre-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .cre-left-img {
+        width: auto;
+    }
+
+    #buscador {
+        width: 100%;
+       
+    }
+
+    .cre-right {
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-buscar {
+        width: 100%;
+       
+    }
+
+    .form-buscar input {
+        width: 100%;
+
+    }
+
+    .cre-left-list-2 {
+        width: 100%;
+
+    }
+
+    .cre-conteo {
+        width: 30%;
+        height: 2vh;
+
+    }
+
+    .cre-filtrado {
+        width: 70%;
+
+    }
+
+    .cre-right-list-2 {
+        width: 100%;
+    }
+
+    .cre-right-text {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    #btnagregar {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #modalRegistro .modal-dialog {
+        max-width: 100%;
+      
+    }
+
+    #modalRegistro .modal-content {
+        width: 100%;
+        height: auto;
+       
+      
+        /* Esto solo es para pruebas, puedes quitarlo o cambiar el color */
+    }
+
+    #modalRegistro .modal-body {
+       
+        width: 100%;
+        padding: 20px;
+      
+        /* Si deseas más espacio en el cuerpo */
+    }
+    
+    .div-botones{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modalEditar .modal-dialog {
+        max-width: 100%;
+      
+    }
+
+    #modalEditar .modal-content {
+        width: 100%;
+        height: auto;
+       
+      
+        /* Esto solo es para pruebas, puedes quitarlo o cambiar el color */
+    }
+
+    #modalEditar .modal-body {
+       
+        width: 100%;
+        padding: 20px;
+      
+        /* Si deseas más espacio en el cuerpo */
+    }
+    
+    .div-botones{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     
+
+}
+
+/* Esta es la parte para que los dispositivos moviles esten en horizontal */
+@media (max-width:995px) and (orientation: landscape) {
+
+    /* Cubre toda la pantalla del dispositivo */
+    .col-Mensaje {
+        position: fixed;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        /* Con esto ajustamos la posición del texto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Un color de fondo */
+
+        background-color: rgb(241, 241, 241);
+        /* Debemos superponerlo */
+        z-index: 1000;
+    }
+
+    /* El texto que vamos a mostrar */
+    .col-Mensaje::before {
+        content: "";
+        font-size: 2rem;
+    }
+
+    .col-App {
+        display: none;
+    }
+}

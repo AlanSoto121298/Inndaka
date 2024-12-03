@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* ESTRUCTURA COMPLETA DEL LOGIN */
+.Div-PADRE-PADRE{
+    width: 100%;
+    height: auto;
+ 
+}
+.div-padre {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.div-padre-img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    filter: blur(3px) brightness(60%);
+}
+
+.div-padre-img-arsol_logo {
+    height: 30%;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+}
+
+
+/* ESTRUCTURA DEL FORMULARIO */
+.div-formulario-login {
+    width: 33.33%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Color blanco con opacidad del 50% */
+}
+
+
+
+/* FORMULARIO */
+
+.div-formulario-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input{
+       outline: none;
+       padding: 0 15px;
+}
+
+
+.btn-entrar {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background-color: #CA2126;
+}
+.btn-entrar:active {
+    background-color: #A10005;
+}
+
+
+.div-formulario-login-titulo {
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+.div-form-inf {
+    padding: 20px;
+    width: 80%;
+}
+
+.input-group-name,
+.input-group-password {
+    width: 100%;
+    height: 50px;
+    color: #000;
+    border-radius: 10px;
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+    /* Agrega margen inferior entre los grupos de inputs */
+}
+
+.input-group input,
+.input-group label {
+    margin-bottom: 10px;
+    /* Agrega margen inferior a los elementos del grupo */
+}
+
+.btn-entrar {
+    margin-top: 15px;
+    /* Agrega margen superior al botón */
+}
+
+.div-olvidaste-password {
+    margin-top: 80px;
+}
+
+.input-group-Recordar-Contraseña{
+    display: flex;
+    justify-content: center;
+}
+
+/*PARA TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .div-formulario-login{
+        width: 100%;
+       }
+    .div-padre-img-arsol_logo {
+        height: 12%;
+        position: absolute;
+        z-index: 100;
+        top: 15%;
+        left: 68%;
+        transform: translate(-140%, -50%);
+    }
+
+    h2{
+        font-size: 15px;
+    }
+    
+    
+}
+
+
+/*PARA CELULAR*/
+@media (max-width: 768px) and (orientation: portrait) {
+    .div-formulario-login{
+     width: 100%;
+    }
+ 
+    h2{
+     text-align: center;
+     font-size: 15px;
+    }
+    .div-padre-img-arsol_logo {
+     height: 12%;
+     position: absolute;
+     z-index: 100;
+     top: 7%;
+     left: 110%;
+     transform: translate(-140%, -50%);
+ }
+ }
+ 
+ 
+
+
+

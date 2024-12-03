@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirige las URLs del tipo /credenciales/{id_persona} a la URL interna correspondiente
+RewriteRule ^credenciales/([0-9]+)$ /admin/modulos/credenciales/Controlador/detalle.php?id_persona=$1 [L,QSA]

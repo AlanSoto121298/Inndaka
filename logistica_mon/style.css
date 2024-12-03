@@ -1,0 +1,251 @@
+/* ------------- HEADER -------------- */
+.mod-Header-Left p {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+}
+
+.mod-Header h1 {
+    font-size: 30px;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+}
+
+.mod-Header-Left img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.mod-Header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.mod-Header-Left {
+    display: flex;
+    flex: 1;
+    padding-left: 0;
+}
+
+.mod-Header-Center {
+    flex: 2;
+    text-align: center;
+}
+
+.mod-Header-Right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end; /* Agregado para alinear al final del contenedor */
+}
+.mod-Header-Right a.btn-warning {
+    text-decoration: none; 
+    color:   #FF8888;
+}
+.mod-Header-Right a.btn-warning:hover {
+    text-decoration: none; 
+    color: #FF5555;
+}
+
+.mod-Header-Right a.btn-warning:active {
+    text-decoration: none; 
+    color: #FF2323;
+}
+
+
+
+/*---TERMINA HEADER----*/
+
+
+
+/*Contenedor padre*/
+.mod-Padre-Container {
+    height: auto;
+    padding: 0.5em;
+}
+
+/*Carrusel*/
+.mod-Carrusel-Container {
+    max-width: 2000px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.fade {
+    animation: fade 2s ease-in-out infinite;
+}
+
+/*Termina carrusel*/
+
+.mod-Modulos,
+.mod-Modulos2{
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+ 
+}
+
+.mod-Colaboradores,
+.mod-rum,
+.mod-rum-monitorista,
+.mod-gaceta,
+.mod-inven,
+.mod-responsivas {
+    width: 33.3%;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+    background:   #FF8888;
+    cursor: pointer;
+    display: flex;
+    
+}
+
+.mod-Colaboradores,
+.mod-rum,
+.mod-inven,
+.mod-responsivas{
+    opacity: 0.4;
+}
+
+.mod-Colaboradores:hover,
+.mod-gaceta:hover,
+.mod-rum:hover,
+.mod-rum-monitorista:hover,
+.mod-inven:hover,
+.mod-responsivas:hover{
+    background:   
+    #A10005;
+}
+
+.mod-Colaboradores,
+.mod-rum,
+.mod-gaceta,
+.mod-inven{
+    margin-right: 10px;
+}
+
+.mod-Titulo-h2,
+.mod-Titulo-h2-Rum,
+.mod-Titulo-h2-Monitorista,
+.mod-Titulo-h2-Gaceta,
+.mod-Titulo-h2-Inventario,
+.mod-Titulo-h2-Responsivas{
+    width: 50%; /* Cambiar el ancho al 100% para ocupar todo el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.mod-Titulo-h2 h2:hover,
+.mod-Titulo-h2-Rum h2:hover,
+.mod-Titulo-h2-Monitorista h2:hover,
+.mod-Titulo-h2-Gaceta h2:hover,
+.mod-Titulo-h2-Inventario h2:hover,
+.mod-Titulo-h2-Responsivas h2:hover
+{
+    font-size: 33px;
+}
+
+.mod-Img,
+.mod-Img-Rum,
+.mod-Img-monitorista,
+.mod-Img-Gaceta,
+.mod-Img-Inv,
+.mod-Img-resp {
+    width: 50%;
+    min-height: 20vh; /* Cambiar a min-height en lugar de height */
+    overflow: hidden;
+}
+
+.mod-Img img,
+.mod-Img-Rum img,
+.mod-Img-monitorista img,
+.mod-Img-Gaceta img,
+.mod-Img-Inv img,
+.mod-Img-resp img{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/*DISEÑO DE TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+.mod-Modulos,
+.mod-Modulos2{
+    display: block;
+}
+.mod-Colaboradores,
+.mod-rum,
+.mod-rum-monitorista,
+.mod-gaceta,
+.mod-inven,
+.mod-responsivas{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: 40px;
+}
+    
+}
+
+/*DISEÑO DE CELULAR*/
+
+
+@media (max-width:768px) and (orientation: portrait){
+
+
+    .mod-Header-Center h1{
+      font-size: 15px;
+    }
+
+    .mod-Modulos,
+    .mod-Modulos2{
+        display: block;
+    }
+    .mod-Colaboradores,
+    .mod-rum,
+    .mod-rum-monitorista,
+    .mod-gaceta,
+    .mod-inven,
+    .mod-responsivas{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+   
+    h2{
+        font-size: 20px;
+    }
+    .mod-Header-Right a{
+        font-size: 15px;
+       
+    }
+    .mod-Header-Left p{
+        display: none;
+    }
+       
+   
+}
+
+

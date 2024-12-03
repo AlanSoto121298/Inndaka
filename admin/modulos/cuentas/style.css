@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+/* ------------- HEADER -------------- */
+.col-Header-Left p {
+    position: relative;
+    top: 40px;
+    font-size: 12px;
+}
+
+.col-Header h1 {
+    font-size: 30px;
+    text-shadow: 0px 0 6px #505050;
+    margin: 0;
+}
+
+.col-Header-Left img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.col-Header {
+    display: flex;
+    align-items: center;
+  margin-bottom: 5px;
+
+}
+
+
+.col-Header-Left {
+    display: flex;
+    flex: 1;
+    padding-left: 0;
+}
+
+
+.col-Header-Center {
+    flex: 2;
+    text-align: center;
+}
+
+
+
+.table-container {
+    max-height: 700px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;  /* Habilita el scroll vertical */
+}
+
+.table {
+    border-collapse: collapse; /* Asegura que no haya espacios indeseados */
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho */
+}
+
+.table thead {
+    background-color: #ffffff; /* Color de fondo para el encabezado */
+    position: sticky; /* Mantiene el encabezado fijo */
+    top: 0; /* Fija el encabezado en la parte superior del contenedor */
+    z-index: 10; 
+}
+
+.table thead th {
+    padding: 10px; /* Espaciado para las celdas */
+    text-align: left; /* Alineación del texto */
+    border-bottom: 2px solid #007bff; /* Línea debajo del encabezado */
+}
+
+.table tbody {
+    border-top: none; /* Asegúrate de que no haya borde superior en el tbody */
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #e0e0e0; /* Línea entre filas opcional */
+}
+
+
+
+
+

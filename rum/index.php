@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="imgs/arsol.jpg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de utilización de Maquinaria</title>
+
+
+
+</head>
+
+<body>
+    <!--  HEADER -->
+    <header class="rum-Header">
+        <div class="rum-Header-Left">
+            <a href="../../index.php" class="rum-Button-Link">
+                <img src="imgs/arsol.jpg" alt="Logo">
+            </a>
+            <p id="rum-Bienvenida-header"> Bienvenida <b>Marta Caballero</b></p>
+        </div>
+        <div class="rum-Header-Center">
+            <h1>RUM</h1>
+        </div>
+        <div class="rum-Header-Right">
+            <!-- -------------------------------------------------------------- -->
+            <!--   <form action="buscar_RUM.php" method="post"> -->
+            <input type="text" placeholder="Buscar..." name="buscador" id="rum-Input-Buscar">
+            <button type="submit" onclick="buscarInformacion()"><i class="fa fa-search"></i></button>
+            <!--   </form> -->
+            <!-- -------------------------------------------------------------- -->
+
+        </div>
+    </header>
+
+    <div class="rum-Botones-Imprimir-Modal">
+        <button type="submit" onclick="imprimirDatos()" id="rum-Btn-Imprimir">Imprimir</button>
+    </div>
+    <div class="rum-Div-Padre">
+        <form action="guardar.php" method="post" class="rum-Formulario-Padre" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="id_formulario" value="">
+            <div class="rum-Datos-Generales-Maquina-Vehiculo">
+                <div class="rum-Datos-Generales">
+                    <div class="rum-Datos-Generales-Dividir">
+                         <p id="rum-P-Title-Datos-Generales">Datos Generales</p>
+                        <div class="rum-Div-Datos-Generales-Centro">
+                            <div class="rum-Div-Contenido-1">
+                                <label for="rum-Input-Nombre-Operador">Nombre del operador</label>
+                                <input type="text" name="nombre_operador" id="rum-Input-Nombre-Operador"
+                                    placeholder="Ej. Jos&eacute; Razo Prieto" readonly>
+                            </div>
+
+
+                            <div class="rum-Div-Contenido-2">
+                                <label for="rum-Input-No-Empleado">No. de empleado</label>
+                                <input type="text" name="no_empleado" id="rum-Input-No-Empleado"
+                                    placeholder="Ej. 123456" readonly>
+                            </div>
+                            <div class="rum-Div-Contenido-3">
+                                <label for="">Fecha</label>
+                                <input type="date" name="fecha" id="rum-Input-Fecha" placeholder="Ej. 12/12/1993"
+                                    readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rum-Datos-Maquina-Vehiculos">
+                    <div class="rum-Datos-Maquina-Vehiculos-Dividir">
+                        <p id="rum-P-Title-Datos-Maquina-Vehiculo">Datos de la maquina y/o vehiculo</p>
+                        <div class="rum-Div-Datos-Maquina-Vehiculo-Centro">
+                            <div class="rum-Div-Contenido-4">
+                                <label for="">Nombre Economico </label>
+                                <input type="text" name="rum_economico" id="rum-Input-Economico"
+                                    placeholder="Ej. EQ-250" readonly>
+                            </div>
+                            <div class="rum-Div-Contenido-5">
+                                <label for="">Tipo</label>
+                                <input type="text" name="tipo" id="rum-Input-Tipo" placeholder="Ej. Gr&uacute;a"
+                                    readonly>
+                            </div>
+                            <div class="rum-Div-Contenido-6">
+                                <label for="">Modelo</label>
+                                <input type="text" name="modelo" id="rum-Input-Modelo" placeholder="Ej. Modelo"
+                                    readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rum-Div-Datos-Control">
+                <div class="rum-Datos-Control-Dividir">
+                    <p id="rum-P-Title-Datos-Control">Datos de Control</p>
+                    <div class="rum-Div-Datos-Control-Centro">
+                        <div class="rum-Div-Contenido-7">
+<!--                             <label for="">Llegada del operador</label>
+ -->                            <input type="hidden" name="rum-llegada-operador" id="rum-Input-llegada-operador"
+                                placeholder="Ej. 9:00PM..">
+                        </div>
+                        <div class="rum-Div-Contenido-8">
+<!--                             <label for="">Salida del operador</label>
+ -->                            <input type="hidden" name="rum-salida-operador" id="rum-Input-Salida-Operador"
+                                placeholder="Ej. 6:00PM..">
+                        </div>
+
+                    </div>
+                  <div class="rum-Div-Encendido">
+    <div class="rum-Div-Contenido-9-Encendido">
+        <label for="">Encendido máquina</label>
+        <input type="text" name="encendido_maquina" id="rum-Input-Encendido-Maquina" placeholder="Ej. 9:30AM.." readonly>
+    </div>
+    <div class="rum-Div-Contenido-10-Fecha">
+        <label for="">Fecha</label>
+        <input type="text" name="rum_fecha_1" id="rum-Input-Fecha-Foto" placeholder="Ej. 9:30AM.." readonly>
+    </div>
+    <div class="rum-Div-Contenido-11-Ubicacion">
+        <label for="">Ubicación</label>
+        <input type="text" name="rum_ubicacion_1" id="rum-Input-ubicacion-Foto" placeholder="Ubicación" readonly>
+    </div>
+</div>
+<div class="rum-Div-Apagado">
+    <div class="rum-Div-Contenido-9-Apagado">
+        <label for="">Apagado máquina</label>
+        <input type="text" name="apagado_maquina" id="rum-Input-Apagado-Maquina" placeholder="Ej. 9:30AM.." readonly>
+    </div>
+    <div class="rum-Div-Contenido-10-Fecha-Apagado">
+        <label for="">Fecha</label>
+        <input type="text" name="rum_fecha_2" id="rum-Input-Fecha-Foto-2" placeholder="Ej. 9:30AM.." readonly>
+    </div>
+    <div class="rum-Div-Contenido-11-Ubicacion-Apagado">
+        <label for="">Ubicación</label>
+        <input type="text" name="rum_ubicacion_2" id="rum-Input-ubicacion-Foto-2" placeholder="Ubicación" readonly>
+    </div>
+</div>
+
+
+            <!-- --------------------------------------------------------------------------------------- -->
+
+            <div class="rum-Div-Odometro-Horometro">
+                <div class="rum-Seleccion-Mapa">
+                    <label for="mapa">Selecciona el mapa:</label>
+                    <!-- Cambié el select por un input oculto para almacenar el valor del mapa -->
+                    <input type="hidden" id="mapa1" name="mapa" value="TRASLADOS/S-C.html">
+                    <input type="hidden" id="mapa2" name="mapa" value="TRASLADOS/S-DB.html">
+                    <input type="hidden" id="mapa3" name="mapa" value="TRASLADOS/S-EC.html">
+                </div>
+                <!-- Contenedor del mapa -->
+                <!-- Aquí se mostrará el mapa correspondiente -->
+                <div class="rum-Contenedor-Mapa" id="mapa-container">
+                    <!-- El mapa se incrustará aquí -->
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------- -->
+
+
+
+
+                </div>
+            </div>
+            <div class="rum-Div-Odometro-Horometro">
+                <div class="rum-Odometro-Horometro-Dividir">
+                    <p id="rum-P-Title-Odometro-Horometro">Odometro y Horometro</p>
+                    <div class="rum-Div-Padre-Camara">
+                        <div class="rum-Div-Camara">
+                          <label for="">Tomar Foto</label>
+                          <div class="file-input-container">
+                            <input type="file" name="rum_camara1" id="rum-Input-camara1" accept="image/*" capture="environment" onchange="mostrarVistaPrevia_5('rum-Input-camara1', 'vista-previa-Camara1', 'hora-adjunto1', 'ubicacion-adjunto1')" readonly value="Tomar Foto">
+                            <img id="vista-previa-Camara1" style="max-width: 300px; max-height: 300px;">
+                            <div id="info-adicional1">
+                                <p name="rum_fecha_hora_camara1" id="hora-adjunto1"></p>
+                                <input type="hidden" name="rum_fecha_hora_camara1" id="rum_fecha_hora_camara1" value="">
+                                <p name="rum_ubicacion_camara1" id="ubicacion-adjunto1"></p>
+                                <input type="hidden" name="rum_ubicacion_camara1" id="rum_ubicacion_camara1" value="">
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="rum-Div-Control-Actividades-Horas-Campo">
+                <div class="rum-Control-Actividades-Horas-Campo-Dividir">
+                    <p id="rum-P-Title-Actividades-Horas-Campo">Control de actividades y horas en campo</p>
+                </div>
+                <div class="rum-Primer-Actividad">
+                    <div class="rum-Div-No-Actividad">
+<!--                         <label for="">No. Actividad</label> -->
+                        <input type="hidden" name="rum_actividad" id="rum-Input-Actividad" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Descripcion-Actividad">
+<!--                         <label for="">Descripcion de la actividad</label> -->
+                        <input type="hidden" name="rum_descripcion" id="rum-Input-Descripcion" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Hora-Inicio-Trabajo">
+<!--                         <label for="">Hora  inicio de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_inicio" id="rum-Input-hora-inicio" placeholder="Ej. 1:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Hora-Termino-Trabajo">
+<!--                         <label for="">Hora  termino de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_termino" id="rum-Input-hora-termino" placeholder="Ej. 7:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Horas-Efectivas">
+<!--                         <label for="">Horas efectivas</label> -->
+                        <input type="hidden" name="rum_horas_efectivas" id="rum-Input-horas-efectivas"
+                            placeholder="Ej. 15 hrs">
+                    </div>
+                    <div class="rum-Div-Observaciones">
+<!--                         <label for="">Observaciones</label> -->
+                        <input type="hidden" name="rum_observaciones" id="rum-Input-observaciones"
+                            placeholder="Ej. paso....">
+                    </div>
+                    <div class="rum-Div-Combustible">
+                        <label for="">Combustible</label>
+                        <input type="file" name="rum_combustible" id="rum-Input-combustible" placeholder="Ej. paso...." onchange="mostrarVistaPrevia('rum-Input-combustible', 'vista-previa-combustible')" accept="image/*" capture="environment" value="Tomar Foto">
+                        <img id="vista-previa-combustible" style="max-width: 300px; max-height: 300px;">
+                    </div>                    
+                </div>
+
+
+
+
+             <div class="rum-Segunda-Actividad">
+                    <div class="rum-Div-No-Actividad">
+<!--                         <label for="">No. Actividad</label> -->
+                        <input type="hidden" name="rum_actividad_1" id="rum-Input-Actividad_1" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Descripcion-Actividad">
+<!--                         <label for="">Descripcion de la actividad</label> -->
+                        <input type="hidden" name="rum_descripcion_1" id="rum-Input-Descripcion_1" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Hora-Inicio-Trabajo">
+<!--                         <label for="">Hora  inicio de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_inicio_1" id="rum-Input-hora-inicio_1" placeholder="Ej. 1:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Hora-Termino-Trabajo">
+<!--                         <label for="">Hora termino de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_termino_1" id="rum-Input-hora-termino_1" placeholder="Ej. 7:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Horas-Efectivas">
+<!--                         <label for="">Horas efectivas</label> -->
+                        <input type="hidden" name="rum_horas_efectivas_1" id="rum-Input-horas-efectivas_1"
+                            placeholder="Ej. 15 hrs">
+                    </div>
+                    <div class="rum-Div-Observaciones">
+<!--                         <label for="">Observaciones</label> -->
+                        <input type="hidden" name="rum_observaciones_1" id="rum-Input-observaciones_1"
+                            placeholder="Ej. paso....">
+                    </div>
+                    <div class="rum-Div-Combustible">
+                        <label for="">Combustible</label>
+                        <input type="file" name="rum_combustible_1" id="rum-Input-combustible_1" placeholder="Ej. paso...." onchange="mostrarVistaPrevia('rum-Input-combustible_1', 'vista-previa-combustible_1')" accept="image/*" capture="environment" value="Tomar Foto">
+                        <img id="vista-previa-combustible_1" style="max-width: 300px; max-height: 300px;">
+                    </div>
+                </div>
+
+
+
+
+
+               <div class="rum-Tercera-Actividad">
+                    <div class="rum-Div-No-Actividad">
+<!--                         <label for="">No. Actividad</label> -->
+                        <input type="hidden" name="rum_actividad_2" id="rum-Input-Actividad_2" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Descripcion-Actividad">
+<!--                         <label for="">Descripcion de la actividad</label> -->
+                        <input type="hidden" name="rum_descripcion_2" id="rum-Input-Descripcion_2" placeholder="Ej. 1..">
+                    </div>
+                    <div class="rum-Div-Hora-Inicio-Trabajo">
+<!--                         <label for="">Hora  inicio de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_inicio_2" id="rum-Input-hora-inicio_2" placeholder="Ej. 1:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Hora-Termino-Trabajo">
+<!--                         <label for="">Hora  termino de trabajo</label> -->
+                        <input type="hidden" name="rum_hora_termino_2" id="rum-Input-hora-termino_2" placeholder="Ej. 7:30" onchange="calcularHorasEfectivas()">
+                    </div>
+                    <div class="rum-Div-Horas-Efectivas">
+<!--                         <label for="">Horas efectivas</label> -->
+                        <input type="hidden" name="rum_horas_efectivas_2" id="rum-Input-horas-efectivas_2"
+                            placeholder="Ej. 15 hrs">
+                    </div>
+                    <div class="rum-Div-Observaciones">
+<!--                         <label for="">Observaciones</label> -->
+                        <input type="hidden" name="rum_observaciones_2" id="rum-Input-observaciones_2"
+                            placeholder="Ej. paso....">
+                    </div>
+                    <div class="rum-Div-Combustible">
+                        <label for="">Combustible</label>
+                        <input type="file" name="rum_combustible_2" id="rum-Input-combustible_2" placeholder="Ej. paso...." onchange="mostrarVistaPrevia('rum-Input-combustible_2', 'vista-previa-combustible_2')" accept="image/*" capture="environment" value="Tomar Foto">
+                        <img id="vista-previa-combustible_2" style="max-width: 300px; max-height: 300px;">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="rum-Div-Ubicacion-Trabajos-Reporte-Fallas">
+                <div class="rum-Ubicacion-Trabajos-Reporte-Fallas-Dividir">
+                    <p id="rum-P-Title-Ubicacion-Trabajos-Reporte-Fallas">Ubicaci&oacute;n de los trabajos y/o reporte
+                        de fallas</p>
+                </div>
+                <div class="rum-Div-Tramo-Subtramo-Margen-Centro">
+                    <div class="rum-Div-Contenido-11">
+                        <label for="">Tramo</label>
+                        <input type="text" name="rum_tramo" id="rum-Input-Tramo" placeholder="Ej. Salamanca" readonly>
+                    </div>
+                    <div class="rum-Div-Contenido-12">
+                        <label for="">Subtramo</label>
+                        <input type="text" name="rum_subtramo" id="rum-Input-Subtramo" placeholder="Ej. Jose Chaves"
+                            readonly>
+                    </div>
+                    <div class="rum-Div-Contenido-13">
+                        <label for="">Frente</label>
+                        <input type="text" name="margen" id="rum-Input-Apagado-Margen"
+                            placeholder="Ej. Dolores Hidalgo">
+                    </div>
+                </div>
+                <div class="rum-Div-Rendimiento-Operatividad-Causa">
+                    <div class="oculto">
+                        <div class="rum-Div-Rendimiento-Operatividad-Causa-Dividir">
+<!--                             <p id="rum-P-Title-Rendimiento-Operatividad-Causa">% de rendimiento y/o operatividad de la
+                                maquina</p> -->
+                            <div class="oculto" id="rum-porcentaje">
+                                <div>
+                                    <input type="radio" id="circle10" name="valor_porcentaje" value="10">
+                                    <label for="circle1">10%</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="circle20" name="valor_porcentaje" value="20">
+                                    <label for="circle1">20%</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="circle30" name="valor_porcentaje" value="30">
+                                    <label for="circle1">30%</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="circle40" name="valor_porcentaje" value="40">
+                                    <label for="circle1">40%</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="circle50" name="valor_porcentaje" value="50">
+                                    <label for="circle1">50%</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="circle60" name="valor_porcentaje" value="60">
+                                    <label for="circle1">60%</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="circle70" name="valor_porcentaje" value="70">
+                                    <label for="circle1">70%</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="circle80" name="valor_porcentaje" value="80">
+                                    <label for="circle1">80%</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" id="circle90" name="valor_porcentaje" value="90">
+                                    <label for="circle1">90%</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="circle100" name="valor_porcentaje" value="100">
+                                    <label for="circle1">100%</label>
+                                </div>
+
+                                <!-- Repite estos elementos para los 10 círculos -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rum-Div-Contenido-15">
+                        <label for="">Causa</label>
+                        <input type="text" name="causa" id="rum-Input-Causa"
+                            placeholder="Ej. Se encontraron diferentes errores......">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rum-Div-Odometro-Horometro">
+                <div class="rum-Odometro-Horometro-Dividir">
+                    <p id="rum-P-Title-Odometro-Horometro">Odometro y Horometro</p>
+                    <div class="rum-Div-Padre-Camara2">
+                        <div class="rum-Div-Camara2">
+                          <label for="">Tomar Foto</label>
+                          <div class="file-input-container">
+                            <input type="file" name="rum_camara2" id="rum-Input-camara2" accept="image/*" capture="environment" onchange="mostrarVistaPrevia_1('rum-Input-camara2', 'vista-previa-Camara2', 'hora-adjunto2', 'ubicacion-adjunto2')" readonly value="Tomar Foto">
+                            <img id="vista-previa-Camara2" style="max-width: 300px; max-height: 300px;">
+                            <div id="info-adicional2">
+                                <p name="rum_fecha_hora_camara2	" id="hora-adjunto2"></p>
+                                <input type="hidden" name="rum_fecha_hora_camara2" id="rum_fecha_hora_camara2" value="">
+                                <p name="rum_ubicacion_camara2" id="ubicacion-adjunto2"></p>
+                                <input type="hidden" name="rum_ubicacion_camara2" id="rum_ubicacion_camara2" value="">
+                            </div>
+                        </div>
+                      </div> 
+                      </div>
+                </div>
+            </div>
+
+                <div class="oculto">
+                    <div class="rum-Firma-Operador" onclick="document.getElementById('rum-Input-Firma').click()">
+                        <p id="rum-P-Firma-Operador">Firma del operador</p>
+                        <input type="file" name="rum_firma" id="rum-Input-Firma" onchange="mostrarVistaPrevia('rum-Input-Firma', 'vista-previa-firma')" accept="image/*" capture="environment" value="Tomar Foto">
+                        <img id="vista-previa-firma" alt="Vista previa de la firma">
+                    </div>
+                    <div class="rum-Firma-Lider-Proyecto">
+                        <p id="rum-P-Firma-Lider-Proyecto">Firma del líder de proyecto</p>
+                    </div>
+                </div>
+                <div class="rum-Div-Botones">
+                    <button id="rum-Btn-Limpiar">Limpiar</button>
+                    <button type="submit" name="guardar" id="rum-Btn-Guardar">Guardar</button>
+                    <button type="submit" name="Actualizar" id="rum-Btn-Actualizar">Actualizar</button> 
+                </div>
+                <input type="hidden" name="firmaBase64" id="firmaBase64" value="">
+
+        </form>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            const nombre = urlParams.get('nombre');
+            const no_empleado = urlParams.get('no_empleado');
+            const fecha = urlParams.get('fecha');
+            const rum_economico = urlParams.get('rum_economico');
+            const tipo = urlParams.get('tipo');
+            const modelo = urlParams.get('modelo');
+/*             const llegada_operador = urlParams.get('llegada_operador');
+            const salida_operador = urlParams.get('salida_operador'); */
+            const encendido_maquina = urlParams.get('encendido_maquina');
+            const apagado_maquina = urlParams.get('apagado_maquina');
+            const rum_tramo = urlParams.get('rum_tramo');
+            const rum_subtramo = urlParams.get('rum_subtramo');
+            const margen = urlParams.get('margen');
+            const causa = urlParams.get('causa');
+            const rum_actividad = urlParams.get('rum_actividad');
+            const rum_descripcion = urlParams.get('rum_descripcion');
+            const rum_hora_inicio = urlParams.get('rum_hora_inicio');
+            const rum_hora_termino = urlParams.get('rum_hora_termino');
+            const rum_horas_efectivas = urlParams.get('rum_horas_efectivas');
+            const rum_observaciones = urlParams.get('rum_observaciones');
+            const rum_actividad_1 = urlParams.get('rum_actividad_1');
+            const rum_descripcion_1 = urlParams.get('rum_descripcion_1');
+            const rum_hora_inicio_1 = urlParams.get('rum_hora_inicio_1');
+            const rum_hora_termino_1 = urlParams.get('rum_hora_termino_1');
+            const rum_horas_efectivas_1 = urlParams.get('rum_horas_efectivas_1');
+            const rum_observaciones_1 = urlParams.get('rum_observaciones_1');
+            const rum_actividad_2 = urlParams.get('rum_actividad_2');
+            const rum_descripcion_2 = urlParams.get('rum_descripcion_2');
+            const rum_hora_inicio_2 = urlParams.get('rum_hora_inicio_2');
+            const rum_hora_termino_2 = urlParams.get('rum_hora_termino_2');
+            const rum_camara1 = urlParams.get('rum_camara1');
+            const rum_camara2 = urlParams.get('rum_camara2');
+            const rum_combustible = urlParams.get('rum_combustible');
+            const rum_combustible_1 = urlParams.get('rum_combustible_1');
+            const rum_combustible_2 = urlParams.get('rum_combustible_2');
+    
+            const rum_fecha_1 = urlParams.get('rum_fecha_1');  
+            const rum_ubicacion_1 = urlParams.get('rum_ubicacion_1');
+            const rum_fecha_2 = urlParams.get('rum_fecha_2');
+            const rum_ubicacion_2 = urlParams.get('rum_ubicacion_2');
+            const rum_firma = urlParams.get('rum_firma');
+            const mapa = urlParams.get('mapa');
+
+            
+    
+    
+    
+            const valorPorcentajeSeleccionado = urlParams.get('valor_porcentaje');
+           
+    
+    
+            // Asigna valores a los campos de entrada
+            document.getElementById("id_formulario").value = id;
+            document.getElementById("rum-Input-Nombre-Operador").value = nombre;
+            document.getElementById("rum-Input-No-Empleado").value = no_empleado;
+            document.getElementById("rum-Input-Fecha").value = fecha;
+            document.getElementById("rum-Input-Economico").value = rum_economico;
+            document.getElementById("rum-Input-Tipo").value = tipo;
+            document.getElementById("rum-Input-Modelo").value = modelo;
+/*             document.getElementById("rum-Input-llegada-operador").value = llegada_operador;
+            document.getElementById("rum-Input-Salida-Operador").value = salida_operador; */
+            document.getElementById("rum-Input-Encendido-Maquina").value = encendido_maquina;
+            document.getElementById("rum-Input-Apagado-Maquina").value = apagado_maquina;
+            document.getElementById("rum-Input-Tramo").value = rum_tramo;
+            document.getElementById("rum-Input-Subtramo").value = rum_subtramo;
+            document.getElementById("rum-Input-Apagado-Margen").value = margen;
+            document.getElementById("rum-Input-Causa").value = causa;
+            document.getElementById("rum-Input-Actividad").value = rum_actividad;
+            document.getElementById("rum-Input-Descripcion").value = rum_descripcion;
+            document.getElementById("rum-Input-hora-inicio").value = rum_hora_inicio;
+            document.getElementById("rum-Input-hora-termino").value = rum_hora_termino;
+            document.getElementById("rum-Input-horas-efectivas").value = rum_horas_efectivas;
+            document.getElementById("rum-Input-observaciones").value = rum_observaciones;
+            document.getElementById("rum-Input-Actividad_1").value = rum_actividad_1;
+            document.getElementById("rum-Input-Descripcion_1").value = rum_descripcion_1;
+            document.getElementById("rum-Input-hora-inicio_1").value = rum_hora_inicio_1;
+            document.getElementById("rum-Input-hora-termino_1").value = rum_hora_termino_1;
+            document.getElementById("rum-Input-horas-efectivas_1").value = rum_horas_efectivas_1;
+            document.getElementById("rum-Input-observaciones_1").value = rum_observaciones_1;
+            document.getElementById("rum-Input-Actividad_2").value = rum_actividad_2;
+            document.getElementById("rum-Input-Descripcion_2").value = rum_descripcion_2;
+            document.getElementById("rum-Input-hora-inicio_2").value = rum_hora_inicio_2;
+            document.getElementById("rum-Input-hora-termino_2").value = rum_hora_termino_2;
+            
+    
+      /*       document.getElementById('vista-previa-conbustible').src = rum_combustible;
+            document.getElementById('vista-previa-conbustible_1').src = rum_combustible_1;
+            document.getElementById('vista-previa-conbustible_2').src = rum_combustible_2; */
+    
+            document.getElementById('vista-previa-Camara2').src = rum_camara2;
+            document.getElementById('vista-previa-Camara1').src = rum_camara1;
+    
+                          // Actualizar las nuevas variables  
+            document.getElementById('rum-Input-Fecha-Foto').value = rum_fecha_1;   
+            document.getElementById('rum-Input-ubicacion-Foto').value = rum_ubicacion_1;
+            document.getElementById('rum-Input-Fecha-Foto-2').value = rum_fecha_2;
+            document.getElementById('rum-Input-ubicacion-Foto-2').value = rum_ubicacion_2;
+            
+            document.getElementById('vista-previa-firma').src = rum_firma;
+    
+            
+    // Mostrar el mapa
+    mostrarMapa(mapa);
+
+    // Marcar el radio button correspondiente como seleccionado
+    if (valorPorcentajeSeleccionado) {
+        document.querySelector(`input[name="valor_porcentaje"][value="${valorPorcentajeSeleccionado}"]`).checked = true;
+    }
+});
+
+function mostrarMapa(mapa) {
+    if (mapa) {
+        // Aquí asumes que tienes un elemento con id "mapa-container" donde mostrarás el mapa
+        // Puedes ajustar esta parte según tu implementación
+        const mapaContainer = document.getElementById('mapa-container');
+        mapaContainer.innerHTML = `<iframe src="${mapa}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy""></iframe>`;
+    }
+}
+
+
+
+
+
+
+        
+        function mostrarVistaPrevia(inputId, imgId, horaId, ubicacionId) {
+      var input = document.getElementById(inputId);
+      var img = document.getElementById(imgId);
+      var horaAdjunto = document.getElementById(horaId);
+      var ubicacionAdjunto = document.getElementById(ubicacionId);
+    
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+    
+        reader.onload = function (e) {
+          img.src = e.target.result;
+    
+          // Obtener información adicional
+          obtenerFechaHoraYUbicacion(function (fechaHora, ubicacion) {
+            // Mostrar información en los elementos específicos
+            horaAdjunto.innerText = 'Hora de adjunto: ' + fechaHora;
+            ubicacionAdjunto.innerText = 'Ubicación: ' + ubicacion;
+          });
+        };
+    
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    function obtenerFechaHoraYUbicacion(callback) {
+      var ahora = new Date();
+      var fecha = ahora.toLocaleDateString();
+      var horas = ahora.getHours();
+      var minutos = ahora.getMinutes();
+      var segundos = ahora.getSeconds();
+      var fechaHora = fecha + ' ' + horas + ':' + minutos + ':' + segundos;
+    
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var latitud = position.coords.latitude;
+          var longitud = position.coords.longitude;
+    
+          var apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitud}&lon=${longitud}`;
+    
+          fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+              if (data.display_name) {
+                var ubicacion = data.display_name;
+                callback(fechaHora, ubicacion);
+              } else {
+                callback(fechaHora, 'Ubicación no disponible');
+              }
+            })
+            .catch(error => {
+              console.error('Error al obtener la ubicación:', error.message);
+              callback(fechaHora, 'Ubicación no disponible');
+            });
+        }, function (error) {
+          console.error('Error al obtener la ubicación:', error.message);
+          callback(fechaHora, 'Ubicación no disponible');
+        });
+      } else {
+        console.error('El navegador no soporta geolocalización');
+        callback(fechaHora, 'Ubicación no disponible');
+      }
+    }
+    
+
+
+// Función para mostrar el mapa correspondiente al cargar los datos del formulario
+function mostrarMapaSeleccionado() {
+    // Obtener el valor de mapa de los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const mapa = urlParams.get('mapa');
+    const contenedorMapa = document.getElementById('mapa-container');
+
+    // Verificar si se ha seleccionado un mapa y mostrarlo
+    if (mapa) {
+        // Crear un iframe para mostrar el mapa
+        const iframe = document.createElement('iframe');
+        iframe.src = mapa;
+        iframe.width = '100%';
+        iframe.height = '500';
+        // Limpiar el contenedor del mapa y agregar el iframe
+        contenedorMapa.innerHTML = '';
+        contenedorMapa.appendChild(iframe);
+    }
+}
+
+// Llamar a la función para mostrar el mapa seleccionado al cargar la página
+mostrarMapaSeleccionado();
+
+    
+    </script>
+
+
+
+</body>
+
+</html>
